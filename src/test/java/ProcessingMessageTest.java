@@ -17,6 +17,5 @@ public class ProcessingMessageTest {
         String actual = processingMessage.process("My message");
 
         Assert.assertEquals(expected, actual);
-        Assert.assertNotNull(actual);
     }
 }

@@ -44,8 +44,8 @@ public class DiscordBot {
                     if (eventMessage.getAuthor().map(user -> !user.isBot()).orElse(false)) {
                         String chatId = eventMessage.getChannelId().asString();
                         String messageFromUser = eventMessage.getContent();
-                        String processMes = processingMessage.process(messageFromUser);
-                        sendMessage(chatId, processMes);
+                        String processMessage = processingMessage.process(messageFromUser);
+                        sendMessage(chatId, processMessage);
                     }
                 });
         System.out.println("Discord бот запущен");

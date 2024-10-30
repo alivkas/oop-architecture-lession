@@ -16,6 +16,8 @@
         <telegrambots.version>6.9.7.1</telegrambots.version>
         <discord4j.version>3.2.6</discord4j.version>
         <junit.version>4.13.2</junit.version>
+        <commons-codec.version>1.17.1</commons-codec.version>
+        <reactor-netty-http.version>1.1.23</reactor-netty-http.version>
     </properties>
 
     <dependencies>
@@ -32,6 +34,16 @@
         </dependency>
 
         <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.projectreactor.netty</groupId>
+            <artifactId>reactor-netty-http</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
@@ -44,24 +56,24 @@
                 <groupId>org.telegram</groupId>
                 <artifactId>telegrambots</artifactId>
                 <version>${telegrambots.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>com.fasterxml.jackson.core</groupId>
-                        <artifactId>jackson-databind</artifactId>
-                    </exclusion>
-                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${commons-codec.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.discord4j</groupId>
                 <artifactId>discord4j-core</artifactId>
                 <version>${discord4j.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>io.projectreactor.netty</groupId>
-                        <artifactId>reactor-netty-http</artifactId>
-                    </exclusion>
-                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>io.projectreactor.netty</groupId>
+                <artifactId>reactor-netty-http</artifactId>
+                <version>${reactor-netty-http.version}</version>
             </dependency>
 
             <dependency>
@@ -70,7 +82,6 @@
                 <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 
